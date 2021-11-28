@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009 ... 2019 2020 2021
+ * Copyright (c) 2009 ... 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -17,7 +17,7 @@
 
 #ifndef REV_ZEROF_H
 
-#define REV_ZEROF_H "$Id: zerof.h,v 2.6 2020/06/18 19:18:54 jmccue Exp $"
+#define REV_ZEROF_H "INCLUDED"
 
 #define PROG_NAME "zerof"
 
@@ -47,4 +47,4 @@ struct s_work_area
 
 #endif /* END: REV_ZEROF_H */
 
-/* END: zerof.h */
+/* zerof.h */

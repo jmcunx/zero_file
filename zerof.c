@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009 ... 2019 2020 2021
+ * Copyright (c) 2009 ... 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -15,7 +15,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifndef _MSDOS
 #include <sys/param.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -63,8 +65,6 @@
 #endif
 
 #define SDATETIME 25
-
-#define REV_ZERO_FILE_C "$Id: zerof.c,v 2.20 2021/02/21 21:12:03 jmccue Exp $"
 
 /*
  * init_finfo() -- initialize out file structure
@@ -150,7 +150,7 @@ void bye(struct s_work_area *w, int exit_val)
   /*** Done ***/
   exit(exit_val);
 
-} /* END: bye() */
+} /* bye() */
 
 /*
  * display_rev() -- displays Version Information
@@ -160,15 +160,9 @@ int display_rev(struct s_work_area *w)
 {
 
   fprintf(w->out.fp,"Revision:\n");
-  fprintf(w->out.fp,"\t%s\n", REV_ZERO_FILE_C);
-  fprintf(w->out.fp,"\t%s\n", REV_ZEROF_H);
 
-#ifdef J_LIB2M_H
-  fprintf(w->out.fp,"\t%s\n", J_LIB2M_H);
-#endif
 #ifdef J_LIB2_H
-  fprintf(w->out.fp,"\t%s\n", J_LIB2_H);
-  fprintf(w->out.fp,"\t     %s %s\n", LIT_INFO_02, j2_get_build());
+  fprintf(w->out.fp,"\t%s %s\n", LIT_INFO_02, j2_get_build());
 #endif
 
 #ifdef OSTYPE
@@ -188,9 +182,7 @@ int display_rev(struct s_work_area *w)
 /*
  * display_help() -- displays help info
  */
-int display_help(w)
-
-struct s_work_area *w;
+int display_help(struct s_work_area *w)
 
 {
 
@@ -217,7 +209,7 @@ struct s_work_area *w;
 
   return(EXIT_FAILURE);
 
-} /* end: display_help() */
+} /* display_help() */
 
 /*
  * get_args() -- load arguments
@@ -622,5 +614,3 @@ int main(int argc, char **argv)
   exit(EXIT_SUCCESS);
 
 } /* main() */
-
-/* END: zerof.c */
