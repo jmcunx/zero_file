@@ -2,7 +2,7 @@
 
 This is a little utility created a while
 ago for systems without dd.  All it does
-is overrite am existing file with a character
+is overrite an existing file with a character
 of your choice (or random data).
 
 On Modern File Systems or
