@@ -1,5 +1,5 @@
 .\"
-.\"Copyright (c) 2009 2010 2011 ... 2021 2022
+.\"Copyright (c) 2009 2010 2011 ... 2022 2023
 .\"    John McCue <jmccue@jmcunx.com>
 .\"
 .\"Permission to use, copy, modify, and distribute this software for any
@@ -14,7 +14,7 @@
 .\"ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 .\"OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .\"
-.TH zerof 1 "2021/11/28" "JMC" "User Commands"
+.TH ZEROF 1 "2021-11-28" "JMC" "User Commands"
 .SH NAME
 zerof - Clear File Contents
 .SH SYNOPSIS
@@ -65,7 +65,7 @@ are ignored.
 .TP
 -r
 Optional, use either /dev/urandom or /dev/random
-or as a last resort option '-R' 
+or as a last resort option '-R'
 to obtain Random Overwrite Characters.
 If specified, argument '-c' is ignored.
 .TP
@@ -79,7 +79,7 @@ Optional, Verbose, print run stats on stdout.
 This is probably useless on most modern UN*X File Systems.
 .PP
 Attempts to update the data 'in place',
-this means if the file is deleted after 
+this means if the file is deleted after
 executing this utility, it's original contents
 should not be available for viewing on a disk dump.
 .PP
