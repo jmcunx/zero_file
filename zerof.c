@@ -29,9 +29,16 @@
 #include <unistd.h>
 #include <time.h>
 
-#ifdef IS_BSD
+#ifdef OpenBSD
 #include <err.h>
 #endif
+#ifdef __FreeBSD_version
+#include <err.h>
+#endif
+#ifdef __NetBSD_Version__
+#include <err.h>
+#endif
+
 #include <j_lib2.h>
 #include <j_lib2m.h>
 
