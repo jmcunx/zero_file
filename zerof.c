@@ -431,9 +431,7 @@ char *date_time_str(void)
   j2_today(&ds);
 
   snprintf(date_time, SDATETIME, "%04d/%02d/%02d %02d:%02d:%02d.%03d",
-
-  ds.yyyy, ds.month,   ds.dd,
-  ds.hh,   ds.minutes, ds.ss, ds.mil);
+           ds.yyyy, ds.month,   ds.dd, ds.hh,   ds.minutes, ds.ss, ds.mil);
 
   return(date_time);
 
