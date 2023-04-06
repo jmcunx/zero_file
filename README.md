@@ -2,17 +2,17 @@
 
 This is a little utility created a while
 ago for systems without dd.  All it does
-is overrite an existing file with a character
+is overwrite an existing file with a character
 of your choice (or random data).
 
 This should **not** be used on
-[Solid-state drives](https://en.wikipedia.org/wiki/Solid-state_drive).
+[Solid-state drives](https://en.wikipedia.org/wiki/Solid-state_drive)
+or similar drives.
+If used, I doubt it will really clear the empty space.
 
-On Modern File Systems
-I doubt this utility will really overwrite the actual
-drive sectors.
+Not sure if this will overwrite data on some Modern File Systems.
 
-This requires [j\_lib2](https://github.com/jmcunx/j_lib2) to build.
+[j\_lib2](https://github.com/jmcunx/j_lib2) is an **optional** dependency.
 
 [GNU automake](https://en.wikipedia.org/wiki/Automake)
 only confuses me, but this seems to be good enough for me.

@@ -1,5 +1,5 @@
 .\"
-.\"Copyright (c) 2009 2010 2011 ... 2022 2023
+.\"Copyright (c) 2009 2010 2011 ... 2023 2024
 .\"    John McCue <jmccue@jmcunx.com>
 .\"
 .\"Permission to use, copy, modify, and distribute this software for any
@@ -51,9 +51,9 @@ when overwriting the file.
 Default is 1 pass.
 .TP
 -o file
-Optional, Run Stats written to file 'file' instead
+Optional, Write Run Statistics to file 'file' instead
 of the default of stdout.
-If not specified, output written to stdout.
+Default, Run Statistics written to stdout.
 .TP
 -R
 Optional, call random(3) or rand(3)
@@ -74,9 +74,12 @@ output version information and exit.
 .TP
 -v
 Optional, Verbose, print run stats on stdout.
-
 .SH DIAGNOSTICS
-This is probably useless on most modern UN*X File Systems.
+If your drive is an SSD or a Drive similar to that,
+this utility is probably useless.
+.PP
+This maybe useless on some UN*X File Systems.
+But, no harm in using this and hoping for the best.
 .PP
 Attempts to update the data 'in place',
 this means if the file is deleted after
@@ -100,13 +103,11 @@ you should use at least 3 passes.
 Do not know of any.
 .SH ENVIRONMENT
 none.
-
 .SH ERROR-CODES
 .nf
 0 success
 1 processing error or help/rev displayed
 .fi
-
 .SH SEE-ALSO
 dd(1),
 rm(1),

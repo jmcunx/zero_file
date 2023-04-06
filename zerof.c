@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009 ... 2021 2022
+ * Copyright (c) 2009 ... 2023 2024
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -39,38 +39,13 @@
 #include <err.h>
 #endif
 
+#ifdef HAVE_JLIB
 #include <j_lib2.h>
 #include <j_lib2m.h>
+#endif
 
 #include "zerof.h"
-
-#ifdef __FreeBSD_version
-#define RNUM long int
-#define RAND random
-#define SRAND srandom
-#endif
-#ifdef __Linux__
-#define RNUM long int
-#define RAND random
-#define SRAND srandom
-#endif
-#ifdef __NetBSD_Version__
-#define RNUM long int
-#define RAND random
-#define SRAND srandom
-#endif
-#ifdef OpenBSD
-#define RNUM long int
-#define RAND arc4random
-#define SRAND srandom
-#endif
-
-#ifndef RAND
-#define RNUM int
-#define RAND rand
-#define SRAND srand
-#endif
-
+#define CKARG_SIZE 256
 #define SDATETIME 25
 
 /*
@@ -245,7 +220,8 @@ void get_args(int argc, char **argv, struct s_work_area *w)
   w->err.fp    = stderr;
   w->out.fp    = stdout;
 
-  snprintf(ckarg, CKARG_SIZE, "%c%c%c%c%c%c%c:%c:%c:%c:", 
+  memset(ckarg, 0, CKARG_SIZE);
+  snprintf(ckarg, (CKARG_SIZE - 1), "%c%c%c%c%c%c%c:%c:%c:%c:", 
 	  ARG_FORCE, 
 	  ARG_HELP, 
 	  ARG_VERSION, 
