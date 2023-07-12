@@ -577,8 +577,7 @@ int main(int argc, char **argv)
 	  for (p = 0; p < w.iterations; p++)
 	    {
 	      if (w.verbose > 0)
-		fprintf(w.out.fp, MSG_INFO_I039, date_time_str(), 
-	      (p + 1), w.iterations);
+		fprintf(w.out.fp, MSG_INFO_I039, date_time_str(), (p + 1), w.iterations);
 	      process_file(argv[i], &w);
 	    }
 	}
