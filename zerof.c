@@ -402,7 +402,7 @@ char *date_time_str(void)
   static char date_time[SDATETIME];
   struct s_j2_datetime ds;
 
-  j2_clr_str(date_time, JLIB2_CHAR_NULL, 50);
+  j2_clr_str(date_time, JLIB2_CHAR_NULL, SDATETIME);
 
   j2_today(&ds);
 
